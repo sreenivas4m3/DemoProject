@@ -77,9 +77,17 @@ WSGI_APPLICATION = 'DemoProject.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
+    #'default': {
+        #'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': BASE_DIR / 'db.sqlite3',
+    #}
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': 'kamalbasha9581.mysql.pythonanywhere-services.com',
+        'PORT': '',		#3306 or 3308
+        'NAME': 'kamalbasha9581$default',	#make-sure this DB is in MySQL8-DB
+        'USER': 'kamalbasha9581',
+        'PASSWORD': 'root@123',
     }
 }
 
